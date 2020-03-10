@@ -1,0 +1,6 @@
+#include <os2.h>
+#include "lfolderd.h"
+
+RCINCLUDE lfolder.dlg
+
+

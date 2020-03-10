@@ -1,0 +1,36 @@
+# IBM Developer's Workframe/2 Make File Creation run at 09:18:17 on 06/29/92
+
+# Make File Creation run in directory:
+#   K:\SRC\WPS\LOCKFOLD;
+
+.SUFFIXES:
+
+.SUFFIXES: .c .rc
+
+ALL: LFOLDER.DLL \
+     lfolder.RES
+
+lfolder.dll:  \
+  lfolder.OBJ \
+  lfolder.RES \
+  lfolder.def \
+  MAKEFILE
+   @REM @<<LFOLDER.@0
+     /CO /NOI +
+     lfolder.OBJ
+     lfolder.dll
+     
+     som
+     lfolder.def;
+<<
+   LINK386.EXE @LFOLDER.@0
+   RC lfolder.RES lfolder.dll
+  IMPLIB lfolder.LIB lfolder.def
+
+{.}.rc.res:
+   RC -r .\$*.RC
+
+{.}.c.obj:
+   ICC.EXE /Ss /Ti /Ge- /C .\$*.c
+
+!include MAKEFILE.DEP

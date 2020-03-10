@@ -1,0 +1,36 @@
+# IBM Developer's Workframe/2 Make File Creation run at 09:18:17 on 06/29/92
+
+# Make File Creation run in directory:
+#   K:\SRC\WPS\LOCKFOLD;
+
+# Assumed INCLUDE environment variable path:
+#   K:\SRC\WPS\LOCKFOLD;
+#   H:\MMOS2\MMTOOLKT\INC;
+#   H:\MMOS2\MMTOOLKT\H;
+#   I:\TOOLKT20\C\OS2H;
+#   I:\TOOLKT20\ASM\OS2INC;
+#   J:\IBMC\INCLUDE;
+#   I:\X11R5\MIT\INCLUDE;
+
+
+lfolder.RES:  lfolder.rc  \
+#  {.;$(INCLUDE)}OS2.H  \
+   LFOLDER.DLG  \
+     LFOLDERD.H  \
+   MAKEFILE
+
+lfolder.OBJ:  lfolder.c  \
+   {.;$(INCLUDE);}lfolder.ih  \
+     {$(INCLUDE);}lfolderd.h  \
+#    {$(INCLUDE);}os2.h  \
+     {.;$(INCLUDE);}lfolder.h  \
+#      {$(INCLUDE);}som.h  \
+       {.;$(INCLUDE);}wpfolder.h  \
+#        {$(INCLUDE);}som.h  \
+         {.;$(INCLUDE);}wpfsys.h  \
+#          {$(INCLUDE);}som.h  \
+           {.;$(INCLUDE);}wpobject.h  \
+#            {$(INCLUDE);}pmstddlg.h  \
+#            {$(INCLUDE);}som.h  \
+#            {$(INCLUDE);}somobj.h  \
+   MAKEFILE

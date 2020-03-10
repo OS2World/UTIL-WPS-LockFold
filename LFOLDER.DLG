@@ -1,0 +1,14 @@
+DLGINCLUDE 1 "lfolderd.h"
+
+DLGTEMPLATE PasswordDlgBox LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "WPS Locked Folder", PasswordDlgBox, 134, 70, 176, 38, 
+            WS_VISIBLE, FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        ENTRYFIELD      "", EF_PASSWORD, 64, 20, 87, 8, ES_MARGIN | 
+                        ES_UNREADABLE
+        LTEXT           "Password:", ST_PASSWORD, 9, 18, 48, 12
+        PUSHBUTTON      "~OK", DID_OK, 9, 1, 40, 14
+        PUSHBUTTON      "Cancel", DID_CANCEL, 53, 1, 40, 14
+    END
+END
